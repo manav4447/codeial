@@ -1,0 +1,7 @@
+header {
+  display: flex; }
+  header h2 {
+    margin-left: 0px; }
+  header li a {
+    display: inline-block;
+    box-shadow: 1px 1px light-grey; }
