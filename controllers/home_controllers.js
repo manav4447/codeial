@@ -11,7 +11,7 @@ module.exports.home = async function(req, res){
         /* .sort('-createdAt') */ //this will list post in chronological order
         .populate('user')
         .populate({
-            path: 'comments',
+            path: 'comments',//populating the user of comments  
             populate: {
                 path: 'user'
             }

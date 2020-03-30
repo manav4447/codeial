@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
  const postSchema = new mongoose.Schema({
      content:{
          type: String,
-         required: true
+         required: true   //without this the data will not be saved
      },
      user:{
          type: mongoose.Schema.Types.ObjectId , //this is a reference for which user the post has generated
