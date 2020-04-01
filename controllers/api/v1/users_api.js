@@ -21,12 +21,11 @@ module.exports.createSession = async function(req, res){
 
     //if user is found 
     return res.json(200, {
-        message: "Sign in successfull , here is your token . please keep it safe",
-        data: {
-            token: jwt.sign(user.toJSON(), 'codeial , {expiresIn: '1000'})
+        message: 'Sign in successful, here is your token, please keep it safe!',
+        data:  {
+            token: jwt.sign(user.toJSON(), 'codeial', {expiresIn:  '10000'})
         }
     })
-
 
 
     }catch(err){
