@@ -12,18 +12,22 @@ let transporter = nodemailer.createTransport({
  secure: false,
  auth:{
      user: 'manavjain78310@gmail.com',
-     pass: '@1029487'
- }
+     pass: '@1029487Anu'
+ },
+ //tls: got this from stack overflow as it is showing the error of signed certificates
+ tls: {
+    rejectUnauthorized: false
+}
 });
 
 //template engine
 let renderTemplate = (data, relativePath) => {
-    let mailHTML;
+    let mailHTML;  //this is for storing the html which will be sent as part of email
     ejs.renderFile(
-  path.join(__dirname, '../views/mailers', relativePath ),
-  data,
+  path.join(__dirname, '../views/mailers', relativePath ), //this relativePath is place where the function is being called
+  data,  //this data will be comment: comment in new_comment.ejs
   function(err, template){
-      if(err) {console.log('error in rendering template'); return}
+      if(err) {console.log('error in rendering template' , err); return}
       mailHTML = template;
   }
     )
