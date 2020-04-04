@@ -4,15 +4,14 @@ const path = require('path');
 
 // let's keep it same as before
 module.exports.profile = function(req, res){
-    User.findById(req.params.id, function(err, user){
+   User.findById(req.params.id, function(err, user){
         return res.render('user_profile', {
             title: 'User Profile',
             profile_user: user   //this will help to display the list of friends
         });
-    });
-
-}
-
+    }
+   )};
+ 
 
 module.exports.update = async function(req, res){
  
@@ -63,11 +62,11 @@ module.exports.signUp = function(req, res){
     if (req.isAuthenticated()){
         return res.redirect('/users/profile');
     }
-
+else{
 
     return res.render('user_sign_up', {
         title: "Codeial | Sign Up"
-    })
+    })}
 }
 
 
@@ -120,3 +119,15 @@ module.exports.destroySession = function(req, res){
 
     return res.redirect('/');
 }
+//action for submitting the forfot password page
+
+
+//render forgot password page 
+module.exports.forget = function(req,res){
+     return res.render('forgot_password',{
+
+    title : "Jai babe di"
+
+     })};
+
+

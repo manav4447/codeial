@@ -9,15 +9,24 @@ const mongoose = require('mongoose');
          ref: 'User',  //refer to which user schema : User
      },
  
-     //include the array of ids of all comments in this post schema itself
-     //or we can say that we have created the array of comments in posts schema
+                                                                                  //include the array of ids of all comments in this post schema itself
+                                                                                    //or we can say that we have created the array of comments in posts schema
      comments: [
          {
            type: mongoose.Schema.Types.ObjectId,
            ref: 'Comment'  
          }
-     ]
-    },{
+     ],
+    
+              likes : [
+              {
+                  type: mongoose.Schema.Types.ObjectId,
+                  ref: Like
+
+              }
+              ]  
+            },        
+    {
         timestamps: true
     });
 
