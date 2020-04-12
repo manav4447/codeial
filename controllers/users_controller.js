@@ -19,7 +19,7 @@ if(req.user.id == req.params.id){
     
 
     try{
- let user = await user.findById(req.params.id);
+ let user = await User.findById(req.params.id);
  User.uploadedAvatar(req,res,function(err){
      if(err) {console.log('****Multer error:' ,err)}
      /* console.log(req.file); */  //this will show the properties of file which is uploaded

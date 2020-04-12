@@ -21,7 +21,7 @@ const mongoose = require('mongoose');
               likes : [
               {
                   type: mongoose.Schema.Types.ObjectId,
-                  ref: Like
+                  ref: 'Like'
 
               }
               ]  

@@ -1,7 +1,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
-const port = 5000;
+const port = 9000;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 // used for session cookie
@@ -17,6 +17,11 @@ const sassMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 
+//setup the chat server to be used with sockets.io
+const chatServer = require('http').Server(app);
+const chatScokets = require('./config/chat_sockets').chatSockets(chatServer);
+chatServer.listen(1000);
+console.log('chat server is listening on port: 1000');
 //passport jwt strategy
 app.use(sassMiddleware({
     src: './assets/scss',
@@ -83,6 +88,7 @@ app.listen(port, function(err){
     if (err){
         console.log(`Error in running the server: ${err}`);
     }
-
-    console.log(`Server is running on port: ${port}`);
+    console.log( `Server is up and running on port: ${port}`);
+ /*  //  console.log('%cHello', 'color: green; background: yellow; font-size: 30px');
+    console.log(`'%cServer is up and running', 'color: green; background: yellow; font-size: 30px': ${port}`); */
 });

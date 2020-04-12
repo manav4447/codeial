@@ -4,10 +4,10 @@ user:{
     type: mongoose.Schema.ObjectId,
     ref: 'User'
     },
-Likeable:{
+likeable:{
     type: mongoose.Schema.ObjectId,
     required: true,
-    refPath: 'onModel'
+    refPath: 'onModel'//dynamic reference
    },
    onModel: {
      type: String,
@@ -20,7 +20,7 @@ Likeable:{
    }
 )
    const Like = mongoose.model('Like', likeSchema);
-   moduel.exports = Like; 
+   module.exports = Like; 
 
 
 
