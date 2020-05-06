@@ -1,0 +1,26 @@
+[0mGET / [31m500[0m 170.282 ms - 2773[0m
+[0mGET / [31m500[0m 44.645 ms - 2773[0m
+::1 - - [14/Apr/2020:16:59:53 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:16:59:54 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:16:59:55 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:16:59:55 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:16:59:55 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:16:59:55 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:17:00:07 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:17:07:41 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:17:07:42 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:17:07:50 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:17:07:51 +0000] "GET / HTTP/1.1" 500 2773 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:17:29:42 +0000] "GET / HTTP/1.1" 200 3180 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+[0mGET / [32m200[0m 90.906 ms - 20166[0m
+[0mGET / [36m304[0m 63.973 ms - -[0m
+[0mGET / [36m304[0m 32.586 ms - -[0m
+[0mGET / [36m304[0m 93.915 ms - -[0m
+[0mGET / [36m304[0m 47.194 ms - -[0m
+[0mGET / [36m304[0m 36.964 ms - -[0m
+[0mGET / [36m304[0m 39.475 ms - -[0m
+[0mGET / [36m304[0m 44.507 ms - -[0m
+[0mGET / [36m304[0m 41.841 ms - -[0m
+[0mGET / [36m304[0m 44.480 ms - -[0m
+::1 - - [14/Apr/2020:17:37:33 +0000] "GET / HTTP/1.1" 200 3180 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+::1 - - [14/Apr/2020:17:37:34 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"

@@ -8,7 +8,7 @@ module.exports.home = async function(req, res){
     try{
          // populate the user of each post
         let posts = await Post.find({})
-        /* .sort('-createdAt') */ //this will list post in chronological order
+        // .sort('-createdAt')  //this will list post in chronological order
         .populate('user')
         .populate({
             path: 'comments',//populating the user of comments  

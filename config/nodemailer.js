@@ -1,24 +1,14 @@
 const nodemailer = require('nodemailer');
 const ejs = require('ejs');
+
 const path = require('path')
+const env = require('./environment');
 
 
 
-
-//define our transporter:-. it s an object which will be attached to nodemailer
-let transporter = nodemailer.createTransport({
- service: 'gmail', 
- host: 'smtp.gmail.com',
- secure: false,
- auth:{
-     user: 'manavjain78310@gmail.com',
-     pass: '@1029487Anu'
- },
- //tls: got this from stack overflow as it is showing the error of signed certificates
- tls: {
-    rejectUnauthorized: false
-}
-});
+//define our transporter:-. it s an SMTP object which will be attached to nodemailer
+let transporter = nodemailer.createTransport(env.smtp);
+   
 
 //template engine
 let renderTemplate = (data, relativePath) => {
