@@ -4,8 +4,9 @@
   "description": "My social web application",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod_start": "NODE_ENV = set production  & nodemon index.js"
   },
   "keywords": [
     "social"
@@ -13,12 +14,36 @@
   "author": "Manav Jain",
   "license": "ISC",
   "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.4",
+    "crypto": "^1.0.1",
+    "del": "^5.1.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
     "fs": "0.0.1-security",
-    "mongoose": "^5.9.2"
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "kue": "^0.11.6",
+    "mongoose": "^5.9.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "node-sass-middleware": "^0.11.0",
+    "nodemailer": "^6.4.6",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "rotating-file-stream": "^2.0.2",
+    "socket.io": "^2.3.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }

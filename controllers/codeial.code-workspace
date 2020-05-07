@@ -3,5 +3,8 @@
 		{
 			"path": "C:\\Users\\Lenovo\\Desktop\\NODEWS"
 		}
-	]
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
 }
