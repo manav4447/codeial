@@ -29,7 +29,7 @@ const mongoose = require('mongoose');
     {
         timestamps: true
     });
-console.log(mongoose.Schema);
-    //before expporting to db wr're going to tell it is a model
+// console.log(mongoose.Schema);
+    //before exporting to db wr're going to tell it is a model
     const Post = mongoose.model('Post', postSchema);//name of a model following a schema
     module.exports = Post;

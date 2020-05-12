@@ -25,12 +25,12 @@ const development = {
         port: 587,
         secure: false,
         auth: {
-            user: 'alchemy.cn18',
-            pass: 'codingninjas'
+            user: 'manavjain78310@gmail.com',
+            pass: 'Nielit@2016'
         }
     },
-    google_client_id: "313233209747-dnqmail3j800a2jvsuckqhohodhs7i63.apps.googleusercontent.com",
-    google_client_secret: "0FXb5EBWa4xRfJ8jR-1HKMd2",
+    google_client_id: "48340267264-7strf4qa6qb2r31bdah52ktuup6ldsqv.apps.googleusercontent.com",
+    google_client_secret: "12cEQp9hPEVc9MhhrS-6jJST",
     google_call_back_url: "http://codeial.com/users/auth/google/callback",
     jwt_secret: 'codeial',
     morgan: {

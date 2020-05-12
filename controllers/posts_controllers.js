@@ -1,5 +1,6 @@
 const Post = require('../models/post');
 const Comment = require('../models/comment');
+const postsMailer = require('../mailers/posts_mailer');
 const Like = require('../models/like');
 module.exports.create = async function(req, res){
     try{
@@ -9,13 +10,13 @@ module.exports.create = async function(req, res){
           /*   Post.find({})
              .populate(user) */
         });
-
+        post = await (await Post.findById(post.id).populate('user', 'name email')).execPopulate();
         //check for ajax request
         if(req.xhr){
-            
+            postToSend = await Post.findById(post.id).populate('user', 'name');
             return res.status(200).json({
                 data:{  //json has data
-                    post: post
+                    post: posts
                     //this post is the post which is created above
                 },
                 message : "post-created!"

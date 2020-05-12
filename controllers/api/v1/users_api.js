@@ -9,11 +9,11 @@ const env = require('../../../config/environment');
 
 module.exports.createSession = async function(req, res){
     try{
-        let user =await  findOne({email: req.body.email});
+        let user =await User.findOne({email: req.body.email});
     
         //if we find the user
 
-    if(!user || user.password == req.body.password){
+    if(!user || user.password != req.body.password){
         return res.json(422, {
           message: "invalid username or password"
         });
@@ -23,7 +23,7 @@ module.exports.createSession = async function(req, res){
     return res.json(200, {
         message: 'Sign in successful, here is your token, please keep it safe!',
         data:  {
-            token: jwt.sign(user.toJSON(), env.jwt_secret, {expiresIn:  '10000'})
+            token: jwt.sign(user.toJSON(), env.jwt_secret, {expiresIn:  '10000000000'})
         }
     })
 
