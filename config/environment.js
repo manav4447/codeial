@@ -26,12 +26,15 @@ const development = {
         secure: false,
         auth: {
             user: 'manavjain78310@gmail.com',
-            pass: 'Nielit@2016'
+            pass: 'ifvnxnztsstdcmxt'
+        },
+        tls: {
+            rejectUnauthorized: false
         }
     },
     google_client_id: "48340267264-7strf4qa6qb2r31bdah52ktuup6ldsqv.apps.googleusercontent.com",
     google_client_secret: "12cEQp9hPEVc9MhhrS-6jJST",
-    google_call_back_url: "http://codeial.com/users/auth/google/callback",
+    google_call_back_url: "http://localhost:8000/users/auth/google/callback",
     jwt_secret: 'codeial',
     morgan: {
         mode: 'dev',

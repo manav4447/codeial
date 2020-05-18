@@ -1,4 +1,4 @@
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const express = require('express');
 const env = require('./config/environment');
@@ -13,6 +13,8 @@ const db = require('./config/mongoose');
 // used for session cookie
 const session = require('express-session');
 const passport = require('passport');
+//jwt for reset password
+const jwt = require('jwt-simple');
 const passportLocal = require('./config/passport-local-strategy');
 //passport jwt strategy
 const passportJWT = require('./config/passport-jwt-strategy');

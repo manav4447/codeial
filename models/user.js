@@ -22,6 +22,8 @@ const userSchema = new mongoose.Schema({
         type: String,
        
     },
+     resetPasswordToken: String,//these are for reset password_controller.k=js look into that
+     resetPasswordExpires: Date,
     friendships : [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Friendship'

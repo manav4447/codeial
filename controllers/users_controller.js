@@ -122,12 +122,3 @@ module.exports.destroySession = function(req, res){
 //action for submitting the forfot password page
 
 
-//render forgot password page 
-module.exports.forget = function(req,res){
-     return res.render('forgot_password',{
-
-    title : "Jai babe di"
-
-     })};
-
-

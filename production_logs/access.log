@@ -1,1 +1,9 @@
-[0mGET / [32m200[0m 75.625 ms - 17699[0m
+[0mGET / [36m304[0m 90.185 ms - -[0m
+[0mGET /users/sign-in [36m304[0m 344.168 ms - -[0m
+[0mGET /forgot [33m404[0m 2.617 ms - 145[0m
+[0mGET /users/sign-in [32m200[0m 4.469 ms - 2923[0m
+[0mGET /forgot [33m404[0m 106.298 ms - 145[0m
+[0mGET /forgot [32m200[0m 54.769 ms - 4030[0m
+[0mGET /forgot [32m200[0m 9.783 ms - 2762[0m
+[0mGET /forgot [36m304[0m 4.127 ms - -[0m
+[0mPOST /reset-password [33m404[0m 2.617 ms - 154[0m

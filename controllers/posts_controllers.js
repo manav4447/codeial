@@ -10,13 +10,13 @@ module.exports.create = async function(req, res){
           /*   Post.find({})
              .populate(user) */
         });
-        post = await (await Post.findById(post.id).populate('user', 'name email')).execPopulate();
+        post = await post.populate('user', 'name email').execPopulate();
         //check for ajax request
         if(req.xhr){
-            postToSend = await Post.findById(post.id).populate('user', 'name');
+            // postToSend = await Post.findById(post.id).populate('user', 'name email');
             return res.status(200).json({
                 data:{  //json has data
-                    post: posts
+                    post: post
                     //this post is the post which is created above
                 },
                 message : "post-created!"

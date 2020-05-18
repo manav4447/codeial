@@ -17,7 +17,7 @@ let htmlString = nodemailer.renderTemplate({post: post },'/posts/new_posts.ejs' 
     console.log('inside newPost mailer');
     nodemailer.transporter.sendMail({   //this is a predefined function
         from: 'manavjain@gmail.com',
-        to: comment.post.user.email,//in czse for comments it is comment.post.user.email
+        to:post.user.email,//in czse for comments it is comment.post.user.email //hey i think this line has some mistake
         subject: "New Post  published",
         html: htmlString /* '<h1>Yup, your comment is publised!</h1>' */ //instead of this we'll pass the htmlString which is deined above
     }, (err, info)  => {
