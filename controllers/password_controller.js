@@ -1,6 +1,11 @@
+const nodemailer = require('nodemailer');
+
 const User = require('../models/user')
 const env = require('../config/environment');
-
+const crypto = require('crypto');
+// const nodemailer = require('../config/nodemailer');
+// const async = require(async);
+var async = require("async");
 module.exports.forget = function(req, res){
 
    
@@ -34,12 +39,14 @@ module.exports.resetLink =  function(req,res,next){
         let transporter = nodemailer.createTransport(env.smtp);
         let mailOptions = {
             to: user.email,
-            from:'learntocode@gmail.com',
+            from:'manavjain78310@gmail.com',
             subject: 'password reset',
-            text: 'password reset link is here:', 'http://' + req.heades.host + '/reset/' + token+ '\n\n' +
-            'if you did not request his pls ignore this mail' 
+            text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
+            'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
+            'http://' + req.headers.host + '/reset/' + token + '\n\n' +
+            'If you did not request this, please ignore this email and your password will remain unchanged.\n' 
         };
-     transporter.sensMail(mailOptions, function(err){
+     transporter.sendMail(mailOptions, function(err){
             console.log('mail sent');
             req.flash('success', 'an email has been sent to '+user.email +' with further instructions');
             done(err, 'done');
@@ -52,4 +59,17 @@ module.exports.resetLink =  function(req,res,next){
             return next(err);
             res.redirect('/forgot');
         });
-    });
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+   

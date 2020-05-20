@@ -25,6 +25,7 @@ const sassMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 
+const async = require("async");
 //setup the chat server to be used with sockets.io
 const chatServer = require('http').Server(app);
 const chatScokets = require('./config/chat_sockets').chatSockets(chatServer);

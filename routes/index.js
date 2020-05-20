@@ -10,7 +10,9 @@ console.log('router loaded');
 router.get('/', homeController.home);
 router.get('/forgot', passwordController.forget);
 router.post('/forgot', passwordController.resetLink);
-router.get('./reset/:token', resetController.resetPassword);
+router.get('/reset/:token', resetController.resetPassword);
+
+router.post('/reset/:token', resetController.resetPassword2);
 router.use('/users', require('./users'));
 router.use('/posts', require('./posts'));
 router.use('/comments', require('./comments'));
