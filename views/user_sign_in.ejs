@@ -1,13 +1,17 @@
-<h1>Sign In</h1>
+<link rel="stylesheet" href="/css/signin-form.css">
 
-<form action="/users/create-session" method="POST">
-    <input type="email" name="email" placeholder="Email"  required>
-    <input type="password" name="password" placeholder="Password"  required>
-    <input type="submit" value="Sign In">
+<h1>Sign In</h1>
+<div id="form-container">
+<form class ="form" action="/users/create-session" method="POST">
+    <input class="input"type="email" name="email" placeholder="Email"  required>
+    <input class="input" type="password" name="password" placeholder="Password"  required>
+    <button  class ="button"type="submit" >Sign In</button>
 
 </form>
 
-<p>
+
+
    <button id="Oauth"><a href="/users/auth/google">Google</a></button>
-</p>
+
 <a href="/forgot">Forgot Password</a>
+</div>

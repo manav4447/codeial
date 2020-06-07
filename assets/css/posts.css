@@ -1,0 +1,76 @@
+.posts{
+    height: 
+}
+#post-username{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 10px ;
+}
+.post-container{
+    border: 1px solid black;
+    height: auto;
+    width: 75%;
+   
+    margin-top: 10px;
+    
+}
+#post-content{
+    height: auto;
+    width: 96%;
+    overflow-wrap: hidden;
+    margin-left: 15px ;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+
+    border: 1px solid white;
+    background-color: #f5f1f1;
+
+}
+.delete-post-button{
+    position: absolute;
+    margin-left: 48%;
+    height:5px;
+    width:10px;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 5px;
+    
+}
+.user-name{
+    margin:10px;
+    font-size: 10px;
+    display:flex;
+    margin-left: 10px;
+}
+.comment-content{
+    /* display: flex; */
+    width: auto;
+    height: auto;
+    border: 1px solid white;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    align-items: center;
+
+}
+.toggle-like-button{
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px 5px 2px 0px;
+}
+.post-comments-container{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.comm-placeholder{
+    margin-right: 5px;
+    height:30px;
+    width: 550px;;
+    border-radius: 20px;
+    border: 1px solid white;
+
+}

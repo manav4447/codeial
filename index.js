@@ -13,6 +13,7 @@ const db = require('./config/mongoose');
 // used for session cookie
 const session = require('express-session');
 const passport = require('passport');
+
 //jwt for reset password
 const jwt = require('jwt-simple');
 const passportLocal = require('./config/passport-local-strategy');
@@ -93,7 +94,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(passport.setAuthenticatedUser);
+app.use(passport.setAuthenticatedUser);//this is for that if we login to the page after some time and 
+                                      //    our session time has not been over then it will logs us in
 
 app.use(flash());
 app.use(customMware.setFlash);

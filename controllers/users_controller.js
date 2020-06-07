@@ -1,17 +1,21 @@
 const User = require('../models/user');
 const fs = require('fs');
+const Friendships = require("../models/friendship");
 const path = require('path');
 
 // let's keep it same as before
-module.exports.profile = function(req, res){
-   User.findById(req.params.id, function(err, user){
-        return res.render('user_profile', {
-            title: 'User Profile',
-            profile_user: user   //this will help to display the list of friends
+
+
+
+    module.exports.profile = function(req, res){
+        User.findById(req.params.id, function(err, user){
+            return res.render('user_profile', {
+                title: 'User Profile',
+                profile_user: user
+            });
         });
+    
     }
-   )};
- 
 
 module.exports.update = async function(req, res){
  

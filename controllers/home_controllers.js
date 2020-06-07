@@ -1,6 +1,7 @@
 const Post = require('../models/post');
 const User = require('../models/user');
 const Like = require('../models/like');
+const Friend = require("../models/friendship")
 
 
 module.exports.home = async function(req, res){
@@ -19,13 +20,32 @@ module.exports.home = async function(req, res){
                 path: 'likes'//populating the comments like
             }
         }).populate('likes');//populating the user likes
-    
-        let users = await User.find({});
+     
+        let user = await User.find({});
+
+        let users;
+        if(req.user){
+              users = await User.findById(req.user._id)
+             .populate({
+                     path : "friend",
+                     populate : {
+                        path : "from_user",
+                    }
+                 })
+                 .populate({
+                    path : "friend",
+                    populate : {
+                       path : "to_user"
+                   }
+                });
+            
+            
+        }
 
         return res.render('home', {
             title: "Codeial | Home",
             posts:  posts,
-            all_users: users
+            all_users: user
         });
 
     }catch(err){

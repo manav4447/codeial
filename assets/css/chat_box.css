@@ -35,7 +35,9 @@
     flex-direction: row; }
     #user-chat-box #chat-message-input-container #chat-message-input {
       height: 50%;
-      width: 70%; }
+      width: 70%;
+      border-radius: 20px;
+      border: 1px solid #dddddd; }
     #user-chat-box #chat-message-input-container #send-message {
       height: 50%;
       width: 30%;

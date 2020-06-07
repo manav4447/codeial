@@ -21,17 +21,23 @@
                 </ul>
             </div>
         </section>
-        
-        <div id="freind-container">
-        <section id="user-friends">
-            <h4>Friends</h4>
-            <% for(u of all_users){%>
-                <p>
-                    <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
-                </p>
-            <% } %>
-        </section>
-        </div>
+        <aside>
+                    <div id="users-list">
+                
+                        <h4><i class="fal fa-users"></i>Users </h4>
+                        <% for( u of all_users){%>
+                            <p>
+                                <a href="/users/profile/<%= u.id %>">
+                                    <%= u.name %></a>
+                            </p>
+                        <% } %>
+                
+                    </div>
+
+    
+                        
+                   
+         </aside>           
     <%- include('_chat_box') -%>
 </div>
 
@@ -42,7 +48,7 @@
 <!-- CHANGE :: import the script file for toggle likes, also run it over for the already present posts and comments on the page -->
 <script src="js/toggle_likes.js"></script>
 <script>
-    $('.toggle-like-button').each(function(){
+    $('.toggle-like-button').each(function(){ 
         let self = this;
         let toggleLike = new ToggleLike(self);
     });
@@ -54,3 +60,6 @@
     new ChatEngine('user-chat-box', '<%= locals.user.email%>')
 </script>
 <% } %>
+<script src="/javascript/home_posts.js"></script>
+<script src="/javascript/posts_comments.js"></script>
+<script src="/javascript/toggle-likes.js"></script>

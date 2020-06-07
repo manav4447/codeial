@@ -17,5 +17,12 @@
     <!-- else show only the profile info of different user friends -->
     <p><%= profile_user.name %></p>
     <p><%= profile_user.email %></p>
-    <button class="friend-class-button">Add Friend</button>
+
+ <% if(locals.removeFriend){ %>
+    <a  class = "toggle-friend-btn" href="/friends/add-friend/?id<%= profile_user.id%>">Add Friend</a> 
+<% }else{ %>
+    <a  class = "toggle-friend-btn" href="/friends/add-friend/?id<%= profile_user.id%>">Remove Friend</a>
+<% } %>
 <%} %>
+<script type="text/javascript" src="/js/user_image_preview.js"></script>
+<script type="text/javascript" src="/js/toggle_friend.js"></script>

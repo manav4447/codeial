@@ -1,39 +1,41 @@
+<link rel="stylesheet" href="/css/posts.css">
+<div class="posts">
 <li id="post-<%= post._id %>">
     <p>
         <% if (locals.user && locals.user.id == post.user.id){ %>
-        <small>
-            <a class="delete-post-button"  href="/posts/destroy/<%= post.id %>">X</a>
-        </small>
-        <% } %>
-        <%= post.content %>
-        <br>
-        <small>
-            <%= post.user.name %>
-        </small>
-           <!-- CHANGE :: display the likes of this post, if the user is logged in, then show the link to toggle likes, else, just show the count -->
-           <br>
-           <!-- study about the data attribute -->
-       <small>
-           <% if (locals.user){ %>
-               <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
-                       <%= post.likes.length %> Likes
-               </a>
-           <% }else{ %>
-               <%= post.likes.length %> Likes
-           <% } %>
-       </small>
+          
+            <small>
+                <a class="delete-post-button"  href="/posts/destroy/<%= post.id %>"><button value="Delete Post">X</button></a>
+            </small>
+            <% } %>
+ <div class="post-container">
+            <div id="post-username">
+                <%= post.user.name %>
+            </div>
+            <div id="post-content">
+                    <%= post.content%>
+                    
+                <% if (locals.user){ %>
+                    <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+                            <%= post.likes.length %> <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    </a>
+                <% }else{ %>
+                    <%= post.likes.length %><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                <% } %>
+         </div>
     </p>
     <div class="post-comments">
+        <div class="post-comments-container">
         <% if (locals.user){ %>
             <!-- let's give an id to the new comment form, we'll also need to make the same changes in home_posts.js where we're adding a post to the page -->
             <form id="post-<%= post._id %>-comments-form" action="/comments/create" method="POST">
-                <input type="text" name="content" placeholder="Type Here to add comment..." required>
+                <input class="comm-placeholder" type="text" name="content" placeholder="Type Here to add comment..." required>
                 <input type="hidden" name="post" value="<%= post._id %>" >
-                <input type="submit" value="Add Comment">
+                <input class="comm-button" type="submit" value="Add Comment">
             </form>
 
         <% } %>
-
+        </div>
         <div class="post-comments-list">
             <ul id="post-comments-<%= post._id %>">
                 <% for (comment of post.comments){%>
@@ -47,3 +49,5 @@
     </div>
     
 </li>
+<div>
+</div>
